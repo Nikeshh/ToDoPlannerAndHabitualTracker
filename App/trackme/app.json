@@ -1,0 +1,12 @@
+{
+  "name": "trackme",
+  "displayName": "trackme",
+  "expo": {
+    "name": "trackme",
+    "slug": "trackme",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

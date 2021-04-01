@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 
 class ToDoAll extends Component {
+
     render() {
+        let listItem = [];
         return(
-            <View>
-            </View>
+            <ScrollView>
+                { listItem }
+            </ScrollView>
         );
     }
 }

@@ -28,19 +28,24 @@ class TopScreen extends Component {
       _goBack = () => console.log('Went back');
       _handleSearch = () => console.log('Searching');
       _handleMore = () => console.log('Shown more');
+
+      _showSettings = () => {
+        this.props.navigation.navigate('Settings')
+      }
   
       return(
         <View>
           <Appbar.Header>
-            <Appbar.BackAction onPress={_goBack} />
+            {/*<Appbar.BackAction onPress={_goBack} />*/}
             <Appbar.Content title="Top" subtitle="Lists all the top todo's to be completed" />
             <Appbar.Action icon="magnify" onPress={_handleSearch} />
-            <Appbar.Action icon="dots-vertical" onPress={_handleMore} />
+            {/*<Appbar.Action icon="dots-vertical" onPress={_handleMore} />*/}
+            <Appbar.Action icon="settings" onPress={_showSettings} />
           </Appbar.Header>
           <ScrollView>
-            <Data />
+            {/*<Data />*/}
             <ToDoAll show_new_todo = { true } screen = "All" />
-            <TextInput
+            {/*<TextInput
               style={styles.input}
               onChangeText={updateInput}
               value={this.state.input}
@@ -50,7 +55,7 @@ class TopScreen extends Component {
               title="+"
               color="#841584"
               accessibilityLabel="Add a todo"
-            />
+            />*/}
           </ScrollView>
         </View>
       );

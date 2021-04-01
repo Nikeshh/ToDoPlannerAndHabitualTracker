@@ -31,10 +31,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         padding: 20,
       },
-      datePickerStyle: {
-        width: 200,
-        marginTop: 20,
-      },
+    datePickerStyle: {
+      width: 200,
+      marginTop: 20,
+    },
 });
 
 export default styles;

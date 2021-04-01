@@ -14,35 +14,33 @@ export default class Todo extends Component {
       const Tab = createBottomTabNavigator();
 
         return (
-          <NavigationContainer>
-              <Tab.Navigator
-                  screenOptions={({ route }) => ({
-                      tabBarIcon: ({ focused, color, size }) => {
-                      let iconName;
-                      if (route.name === 'Top') {
-                          iconName = focused
-                          ? 'ios-information-circle'
-                          : 'ios-information-circle-outline';
-                      } else {
-                          iconName = focused
-                          ? 'ios-information-circle'
-                          : 'ios-information-circle-outline';
-                      }
-                      return <Ionicons name={iconName} size={size} color={color} />;
-                      },
-                  })}
-                  tabBarOptions={{
-                      activeTintColor: 'tomato',
-                      inactiveTintColor: 'gray',
-                  }}
-                  >
-                  <Tab.Screen name="Top" component={TopScreen} />
-                  <Tab.Screen name="ToDo" component={ToDoScreen} />
-                  <Tab.Screen name="Completed" component={CompletedScreen} />
-                  <Tab.Screen name="All" component={AllScreen} />
-                  <Tab.Screen name="Juggle" component={JuggleScreen} />
-              </Tab.Navigator>
-         </NavigationContainer>
+            <Tab.Navigator
+                screenOptions={({ route }) => ({
+                    tabBarIcon: ({ focused, color, size }) => {
+                    let iconName;
+                    if (route.name === 'Top') {
+                        iconName = focused
+                        ? 'ios-information-circle'
+                        : 'ios-information-circle-outline';
+                    } else {
+                        iconName = focused
+                        ? 'ios-information-circle'
+                        : 'ios-information-circle-outline';
+                    }
+                    return <Ionicons name={iconName} size={size} color={color} />;
+                    },
+                })}
+                tabBarOptions={{
+                    activeTintColor: 'tomato',
+                    inactiveTintColor: 'gray',
+                }}
+                >
+                <Tab.Screen name="Top" component={TopScreen} />
+                <Tab.Screen name="ToDo" component={ToDoScreen} />
+                <Tab.Screen name="Completed" component={CompletedScreen} />
+                <Tab.Screen name="All" component={AllScreen} />
+                <Tab.Screen name="Juggle" component={JuggleScreen} />
+            </Tab.Navigator>
       );
     }
 }
